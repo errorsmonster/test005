@@ -158,7 +158,7 @@ async def next_page(bot, query):
 
         btn.insert(0, 
             [
-                InlineKeyboardButton("💸 ʙᴜʏ ꜱᴜʙꜱᴄʀɪᴘᴛɪᴏɴ - ᴅɪʀᴇᴄᴛ ғɪʟᴇꜱ 💸", url=f"https://t.me/About_HK_Bot/2")
+                InlineKeyboardButton("💸 ʙᴜʏ ꜱᴜʙꜱᴄʀɪᴘᴛɪᴏɴ - ᴅɪʀᴇᴄᴛ ғɪʟᴇꜱ 💸", callback_data="premium_info")
             ]
         )
         btn.insert(0, 
@@ -176,7 +176,7 @@ async def next_page(bot, query):
         btn = []
         btn.insert(0, 
             [
-                InlineKeyboardButton("💸 ʙᴜʏ ꜱᴜʙꜱᴄʀɪᴘᴛɪᴏɴ - ᴅɪʀᴇᴄᴛ ғɪʟᴇꜱ 💸", url=f"https://t.me/About_HK_Bot/2")
+                InlineKeyboardButton("💸 ʙᴜʏ ꜱᴜʙꜱᴄʀɪᴘᴛɪᴏɴ - ᴅɪʀᴇᴄᴛ ғɪʟᴇꜱ 💸", callback_data="premium_info")
             ]
         )
         btn.insert(0, 
@@ -395,7 +395,7 @@ async def filter_qualities_cb_handler(client: Client, query: CallbackQuery):
         ]
         btn.insert(0, 
             [
-                InlineKeyboardButton("💸 ʙᴜʏ ꜱᴜʙꜱᴄʀɪᴘᴛɪᴏɴ - ᴅɪʀᴇᴄᴛ ғɪʟᴇꜱ 💸", url=f"https://t.me/About_HK_Bot/2")
+                InlineKeyboardButton("💸 ʙᴜʏ ꜱᴜʙꜱᴄʀɪᴘᴛɪᴏɴ - ᴅɪʀᴇᴄᴛ ғɪʟᴇꜱ 💸", callback_data="premium_info")
             ]
         )
         btn.insert(0, 
@@ -413,7 +413,7 @@ async def filter_qualities_cb_handler(client: Client, query: CallbackQuery):
         btn = []
         btn.insert(0, 
             [
-                InlineKeyboardButton("💸 ʙᴜʏ ꜱᴜʙꜱᴄʀɪᴘᴛɪᴏɴ - ᴅɪʀᴇᴄᴛ ғɪʟᴇꜱ 💸", url=f"https://t.me/About_HK_Bot/2")
+                InlineKeyboardButton("💸 ʙᴜʏ ꜱᴜʙꜱᴄʀɪᴘᴛɪᴏɴ - ᴅɪʀᴇᴄᴛ ғɪʟᴇꜱ 💸", callback_data="premium_info")
             ]
         )
         btn.insert(0, 
@@ -558,7 +558,7 @@ async def filter_languages_cb_handler(client: Client, query: CallbackQuery):
         ]
         btn.insert(0, 
             [
-                InlineKeyboardButton("💸 ʙᴜʏ ꜱᴜʙꜱᴄʀɪᴘᴛɪᴏɴ - ᴅɪʀᴇᴄᴛ ғɪʟᴇꜱ 💸", url=f"https://t.me/About_HK_Bot/2")
+                InlineKeyboardButton("💸 ʙᴜʏ ꜱᴜʙꜱᴄʀɪᴘᴛɪᴏɴ - ᴅɪʀᴇᴄᴛ ғɪʟᴇꜱ 💸", callback_data="premium_info")
             ]
         )
         btn.insert(0, 
@@ -576,7 +576,7 @@ async def filter_languages_cb_handler(client: Client, query: CallbackQuery):
         btn = []
         btn.insert(0, 
             [
-                InlineKeyboardButton("💸 ʙᴜʏ ꜱᴜʙꜱᴄʀɪᴘᴛɪᴏɴ - ᴅɪʀᴇᴄᴛ ғɪʟᴇꜱ 💸", url=f"https://t.me/About_HK_Bot/2")
+                InlineKeyboardButton("💸 ʙᴜʏ ꜱᴜʙꜱᴄʀɪᴘᴛɪᴏɴ - ᴅɪʀᴇᴄᴛ ғɪʟᴇꜱ 💸", callback_data="premium_info")
             ]
         )
         btn.insert(0, 
@@ -757,7 +757,7 @@ async def filter_seasons_cb_handler(client: Client, query: CallbackQuery):
         btn = []
         btn.insert(0, 
             [
-                InlineKeyboardButton("💸 ʙᴜʏ ꜱᴜʙꜱᴄʀɪᴘᴛɪᴏɴ - ᴅɪʀᴇᴄᴛ ғɪʟᴇꜱ 💸", url=f"https://t.me/About_HK_Bot/2")
+                InlineKeyboardButton("💸 ʙᴜʏ ꜱᴜʙꜱᴄʀɪᴘᴛɪᴏɴ - ᴅɪʀᴇᴄᴛ ғɪʟᴇꜱ 💸", callback_data="premium_info")
             ]
         )
         btn.insert(0, 
@@ -2053,7 +2053,7 @@ async def auto_filter(client, msg, spoll=False):
     else:
         message = msg.message.reply_to_message  # msg will be callback query
         search, files, offset, total_results = spoll
-        m=await message.reply_sticker("CAACAgIAAxkBAAIw1WYC0JRcNEHRB50ozZrpw2F5YRo9AAJ1AQACEBptInCKj7c5KByPHgQ",
+        m=await message.reply_sticker("CAACAgUAAxkBAAJY0GYsix_P9Euo4du72pDgIk3CAAHvmgACJgADvJY1Ku3HSQblMLZbHgQ",
         reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton(f'Seaching for {search} 🔎', url=f"https://t.me/+Ul_owPNY0xQzOTRl")]]) 
         )
         settings = await get_settings(message.chat.id)
@@ -2074,7 +2074,7 @@ async def auto_filter(client, msg, spoll=False):
         ]
         btn.insert(0, 
             [
-                InlineKeyboardButton("💸 ʙᴜʏ ꜱᴜʙꜱᴄʀɪᴘᴛɪᴏɴ - ᴅɪʀᴇᴄᴛ ғɪʟᴇꜱ 💸", url=f"https://t.me/About_HK_Bot/2")
+                InlineKeyboardButton("💸 ʙᴜʏ ꜱᴜʙꜱᴄʀɪᴘᴛɪᴏɴ - ᴅɪʀᴇᴄᴛ ғɪʟᴇꜱ 💸", callback_data="premium_info")
             ]
         )
         btn.insert(0, 
