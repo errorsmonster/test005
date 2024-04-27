@@ -63,10 +63,10 @@ async def start(client, message):
             gtxt = "ɢᴏᴏᴅ ᴇᴠᴇɴɪɴɢ 👋"
         else:
             gtxt = "ɢᴏᴏᴅ ɴɪɢʜᴛ 👋"
-        m=await message.reply_text("💕")
+        m=await message.reply_text("🎉")
         await asyncio.sleep(1)
         await m.delete()
-        m=await message.reply_sticker("CAACAgIAAxkBAAIw5GYC0r2dLiGSTSnP-ltYvPMeZqkcAAJfAQACEBptIsuguSqwLj6jHgQ") 
+        m=await message.reply_sticker("CAACAgUAAxkBAAJY0GYsix_P9Euo4du72pDgIk3CAAHvmgACJgADvJY1Ku3HSQblMLZbHgQ") 
         await asyncio.sleep(1)
         await m.delete()
         await message.reply_photo(
@@ -126,10 +126,10 @@ async def start(client, message):
             gtxt = "ɢᴏᴏᴅ ᴇᴠᴇɴɪɴɢ 👋"
         else:
             gtxt = "ɢᴏᴏᴅ ɴɪɢʜᴛ 👋"
-        m=await message.reply_text("💕")
+        m=await message.reply_text("🎉")
         await asyncio.sleep(1)
         await m.delete()
-        m=await message.reply_sticker("CAACAgIAAxkBAAIw5GYC0r2dLiGSTSnP-ltYvPMeZqkcAAJfAQACEBptIsuguSqwLj6jHgQ") 
+        m=await message.reply_sticker("CAACAgUAAxkBAAJY0GYsix_P9Euo4du72pDgIk3CAAHvmgACJgADvJY1Ku3HSQblMLZbHgQ") 
         await asyncio.sleep(1)
         await m.delete()
         await message.reply_photo(
@@ -408,11 +408,11 @@ async def start(client, message):
         )
     )
             filesarr.append(msg)
-        k = await client.send_sticker(sticker="CAACAgIAAxkBAAIocmX1CTONdNLrQtu_mLHT5K0vjAEPAAJ1AQACEBptInCKj7c5KByPHgQ")
+        k = await client.send_sticker(sticker="CAACAgUAAxkBAAJY0GYsix_P9Euo4du72pDgIk3CAAHvmgACJgADvJY1Ku3HSQblMLZbHgQ")
         await asyncio.sleep(600)
         for x in filesarr:
             await x.delete()
-        await k.edit_sticker(sticker="CAACAgIAAxkBAAIocmX1CTONdNLrQtu_mLHT5K0vjAEPAAJ1AQACEBptInCKj7c5KByPHgQ")
+        await k.edit_sticker(sticker="CAACAgUAAxkBAAJY0GYsix_P9Euo4du72pDgIk3CAAHvmgACJgADvJY1Ku3HSQblMLZbHgQ")
         return    
         
     elif data.startswith("files"):
@@ -498,7 +498,7 @@ async def start(client, message):
             btn = [[
                 InlineKeyboardButton("❗ ɢᴇᴛ ꜰɪʟᴇ ᴀɢᴀɪɴ ❗", callback_data=f'delfile#{file_id}')
             ]]
-            k = await msg.reply(sticker="CAACAgIAAxkBAAIocmX1CTONdNLrQtu_mLHT5K0vjAEPAAJ1AQACEBptInCKj7c5KByPHgQ",quote=True)
+            k = await msg.reply(sticker="CAACAgUAAxkBAAJY0GYsix_P9Euo4du72pDgIk3CAAHvmgACJgADvJY1Ku3HSQblMLZbHgQ",quote=True)
             await asyncio.sleep(600)
             await msg.delete()
             await k.edit_text("<b>ʏᴏᴜʀ ᴠɪᴅᴇᴏ / ꜰɪʟᴇ ɪꜱ ꜱᴜᴄᴄᴇꜱꜱꜰᴜʟʟʏ ᴅᴇʟᴇᴛᴇᴅ !!\n\nᴄʟɪᴄᴋ ʙᴇʟᴏᴡ ʙᴜᴛᴛᴏɴ ᴛᴏ ɢᴇᴛ ʏᴏᴜʀ ᴅᴇʟᴇᴛᴇᴅ ᴠɪᴅᴇᴏ / ꜰɪʟᴇ 👇</b>",reply_markup=InlineKeyboardMarkup(btn))
@@ -547,7 +547,7 @@ async def start(client, message):
     btn = [[
         InlineKeyboardButton("❗ ɢᴇᴛ ꜰɪʟᴇ ᴀɢᴀɪɴ ❗", callback_data=f'delfile#{file_id}')
     ]]
-    k = await msg.reply(sticker="CAACAgIAAxkBAAIocmX1CTONdNLrQtu_mLHT5K0vjAEPAAJ1AQACEBptInCKj7c5KByPHgQ",quote=True)
+    k = await msg.reply(sticker="CAACAgUAAxkBAAJY0GYsix_P9Euo4du72pDgIk3CAAHvmgACJgADvJY1Ku3HSQblMLZbHgQ",quote=True)
     await asyncio.sleep(600)
     await msg.delete()
     await k.edit_text("<b>ʏᴏᴜʀ ᴠɪᴅᴇᴏ / ꜰɪʟᴇ ɪꜱ ꜱᴜᴄᴄᴇꜱꜱꜰᴜʟʟʏ ᴅᴇʟᴇᴛᴇᴅ !!\n\nᴄʟɪᴄᴋ ʙᴇʟᴏᴡ ʙᴜᴛᴛᴏɴ ᴛᴏ ɢᴇᴛ ʏᴏᴜʀ ᴅᴇʟᴇᴛᴇᴅ ᴠɪᴅᴇᴏ / ꜰɪʟᴇ 👇</b>",reply_markup=InlineKeyboardMarkup(btn))
