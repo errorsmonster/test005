@@ -1775,13 +1775,13 @@ async def cb_handler(client: Client, query: CallbackQuery):
         buttons = [[
             InlineKeyboardButton('⚜️ ᴜᴘᴅᴀᴛᴇꜱ ᴄʜᴀɴɴᴇʟ ⚜️', url='https://t.me/TG_UPDATES1')
         ],[
-            InlineKeyboardButton('🔍 ɢʀᴏᴜᴘ¹', url='https://t.me/'),
-            InlineKeyboardButton('ɢʀᴏᴜᴘ² 🔎', url='https://t.me/')
+            InlineKeyboardButton('🔍 ɢʀᴏᴜᴘ¹', url='https://t.me/+Ul_owPNY0xQzOTRl'),
+            InlineKeyboardButton('ɢʀᴏᴜᴘ² 🔎', url='https://t.me/TG_Movie_Req_Grp')
         ],[
-            InlineKeyboardButton('✉️ ʀᴇǫᴜᴇꜱᴛ ɢʀᴏᴜᴘ ✉️', url='https://t.me/')
+            InlineKeyboardButton('✉️ ʀᴇǫᴜᴇꜱᴛ ɢʀᴏᴜᴘ ✉️', url='https://t.me/+Ul_owPNY0xQzOTRl')
         ],[
             InlineKeyboardButton('⇇ ʙᴀᴄᴋ', callback_data='start'),
-            InlineKeyboardButton('ꜱᴜᴘᴘᴏʀᴛ 👮', url='https://t.me/')
+            InlineKeyboardButton('ꜱᴜᴘᴘᴏʀᴛ 👮', url='https://t.me/TG_SUPPORT_GROUP')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await query.message.edit_text(
@@ -1856,7 +1856,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
         )
     elif query.data == "subscription":
         buttons = [[
-            InlineKeyboardButton("🕳️ɪɴᴠɪᴛᴇ ʟɪɴᴋ🕳️", url="https://t.me/share/url?url=%F0%9F%A4%9F%CA%9C%E1%B4%87%CA%9F%CA%9F%E1%B4%8F%20%D2%93%CA%80%C9%AA%E1%B4%87%C9%B4%E1%B4%85.%F0%9F%98%8E%0A%0Ahttps%3A//t.me/%7Btemp.U_NAME%7D%3Fstart%3Dreff_%7Bquery.from_user.id%7D%0A%0A%F0%9F%92%96T%CA%9C%E1%B4%87%CA%80%E1%B4%87%20%E1%B4%80%CA%80%E1%B4%87%20%E1%B4%8D%E1%B4%80%C9%B4%CA%8F%20%C9%B4%E1%B4%87%E1%B4%A1%20%E1%B4%8D%E1%B4%8F%E1%B4%A0%C9%AA%E1%B4%87s%20%CA%9C%E1%B4%87%CA%80%E1%B4%87%2C%20%CA%8F%E1%B4%8F%E1%B4%9C%20J%E1%B4%9Cs%E1%B4%9B%20%CA%9C%E1%B4%80%E1%B4%A0%E1%B4%87%20%E1%B4%9B%E1%B4%8F%20s%CA%9C%E1%B4%80%CA%80%E1%B4%87%20%E1%B4%9B%CA%9C%C9%AAs%20%CA%99%E1%B4%8F%E1%B4%80%E1%B4%9B%20%E1%B4%A1%C9%AA%E1%B4%9B%CA%9C%F0%9F%A5%B4%20%F0%9D%9F%B8%F0%9D%9F%B6%20%E1%B4%98%E1%B4%87%E1%B4%8F%E1%B4%98%CA%9F%E1%B4%87.%20%20A%C9%B4%E1%B4%85%20%E1%B4%87%C9%B4J%E1%B4%8F%CA%8F%20%E1%B4%80%CA%9F%CA%9F%20%E1%B4%9B%CA%9C%E1%B4%87%20%E1%B4%8D%E1%B4%8F%E1%B4%A0%C9%AA%E1%B4%87s%20%E1%B4%A1%C9%AA%E1%B4%9B%CA%9C%E1%B4%8F%E1%B4%9C%E1%B4%9B%20%E1%B4%80%E1%B4%85s%20%E1%B4%80%C9%B4%E1%B4%85%20%E1%B4%A1%C9%AA%E1%B4%9B%CA%9C%E1%B4%8F%E1%B4%9C%E1%B4%9B%20s%CA%9C%E1%B4%8F%CA%80%E1%B4%9B%E1%B4%87%C9%B4%E1%B4%87%CA%80s.%F0%9F%94%B0%F0%9F%94%B0%0A%0A%20%E2%9C%85%E0%A4%AF%E0%A4%B9%E0%A4%BE%E0%A4%82%20%E0%A4%95%E0%A4%88%20%E0%A4%A8%E0%A4%88%20%E0%A4%AB%E0%A4%BF%E0%A4%B2%E0%A5%8D%E0%A4%AE%E0%A5%87%E0%A4%82%20%E0%A4%B9%E0%A5%88%E0%A4%82%2C%20%E0%A4%86%E0%A4%AA%E0%A4%95%E0%A5%8B%20%E0%A4%AC%E0%A4%B8%20%E0%A4%87%E0%A4%B8%20%CA%99%E1%B4%8F%E1%B4%9B%20%E0%A4%95%E0%A5%8B%20%F0%9D%9F%B8%F0%9D%9F%B6%20%E0%A4%B2%E0%A5%8B%E0%A4%97%E0%A5%8B%E0%A4%82%20%E0%A4%95%E0%A5%87%20%F0%9F%92%90%E0%A4%B8%E0%A4%BE%E0%A4%A5%20%E0%A4%B8%E0%A4%BE%E0%A4%9D%E0%A4%BE%20%E0%A4%95%E0%A4%B0%E0%A4%A8%E0%A4%BE%20%E0%A4%B9%E0%A5%8B%E0%A4%97%E0%A4%BE%E0%A5%A4%20%E0%A4%94%E0%A4%B0%20%E0%A4%AC%E0%A4%BF%E0%A4%A8%E0%A4%BE%20%E1%B4%80%E1%B4%85s%20%E0%A4%94%E0%A4%B0%20%E0%A4%AC%E0%A4%BF%E0%A4%A8%E0%A4%BE%20%E0%A4%B6%E0%A5%89%E0%A4%B0%E0%A5%8D%E0%A4%9F%E0%A4%A8%E0%A4%B0%20%E0%A4%95%E0%A5%87%20%E0%A4%B8%E0%A4%AD%E0%A5%80%20%E0%A4%AB%E0%A4%BF%E0%A4%B2%E0%A5%8D%E0%A4%AE%E0%A5%8B%E0%A4%82%20%E0%A4%95%E0%A4%BE%20%E0%A4%86%E0%A4%A8%E0%A4%82%E0%A4%A6%20%E0%A4%B2%E0%A5%87%E0%A4%82%E0%A5%A4%F0%9F%A5%B3%F0%9F%A5%B3"),
+            InlineKeyboardButton("🕳️ɪɴᴠɪᴛᴇ ʟɪɴᴋ🕳️", url="https://t.me/{temp.U_NAME}?start=reff_{query.from_user.id}"),
             InlineKeyboardButton('⇚Back', callback_data='start')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
