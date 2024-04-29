@@ -1,4 +1,3 @@
-# Kanged From @TroJanZheX
 import asyncio
 import re
 import ast
@@ -158,7 +157,7 @@ async def next_page(bot, query):
 
         btn.insert(0, 
             [
-                InlineKeyboardButton("💸 ʙᴜʏ ꜱᴜʙꜱᴄʀɪᴘᴛɪᴏɴ - ᴅɪʀᴇᴄᴛ ғɪʟᴇꜱ 💸", callback_data="premium_info")
+                InlineKeyboardButton("💸 ʙᴜʏ ꜱᴜʙꜱᴄʀɪᴘᴛɪᴏɴ - ᴅɪʀᴇᴄᴛ ғɪʟᴇꜱ 💸", url=f"https://t.me/MOVIES_VILLA_UPDATE/75")
             ]
         )
         btn.insert(0, 
@@ -176,7 +175,7 @@ async def next_page(bot, query):
         btn = []
         btn.insert(0, 
             [
-                InlineKeyboardButton("💸 ʙᴜʏ ꜱᴜʙꜱᴄʀɪᴘᴛɪᴏɴ - ᴅɪʀᴇᴄᴛ ғɪʟᴇꜱ 💸", callback_data="premium_info")
+                InlineKeyboardButton("💸 ʙᴜʏ ꜱᴜʙꜱᴄʀɪᴘᴛɪᴏɴ - ᴅɪʀᴇᴄᴛ ғɪʟᴇꜱ 💸", callback_data="subscription")
             ]
         )
         btn.insert(0, 
@@ -395,7 +394,7 @@ async def filter_qualities_cb_handler(client: Client, query: CallbackQuery):
         ]
         btn.insert(0, 
             [
-                InlineKeyboardButton("💸 ʙᴜʏ ꜱᴜʙꜱᴄʀɪᴘᴛɪᴏɴ - ᴅɪʀᴇᴄᴛ ғɪʟᴇꜱ 💸", callback_data="premium_info")
+                InlineKeyboardButton("💸 ʙᴜʏ ꜱᴜʙꜱᴄʀɪᴘᴛɪᴏɴ - ᴅɪʀᴇᴄᴛ ғɪʟᴇꜱ 💸", callback_data="subscription")
             ]
         )
         btn.insert(0, 
@@ -413,7 +412,7 @@ async def filter_qualities_cb_handler(client: Client, query: CallbackQuery):
         btn = []
         btn.insert(0, 
             [
-                InlineKeyboardButton("💸 ʙᴜʏ ꜱᴜʙꜱᴄʀɪᴘᴛɪᴏɴ - ᴅɪʀᴇᴄᴛ ғɪʟᴇꜱ 💸", callback_data="premium_info")
+                InlineKeyboardButton("💸 ʙᴜʏ ꜱᴜʙꜱᴄʀɪᴘᴛɪᴏɴ - ᴅɪʀᴇᴄᴛ ғɪʟᴇꜱ 💸", callback_data="subscription")
             ]
         )
         btn.insert(0, 
@@ -558,7 +557,7 @@ async def filter_languages_cb_handler(client: Client, query: CallbackQuery):
         ]
         btn.insert(0, 
             [
-                InlineKeyboardButton("💸 ʙᴜʏ ꜱᴜʙꜱᴄʀɪᴘᴛɪᴏɴ - ᴅɪʀᴇᴄᴛ ғɪʟᴇꜱ 💸", callback_data="premium_info")
+                InlineKeyboardButton("💸 ʙᴜʏ ꜱᴜʙꜱᴄʀɪᴘᴛɪᴏɴ - ᴅɪʀᴇᴄᴛ ғɪʟᴇꜱ 💸", url=f"https://t.me/MOVIES_VILLA_UPDATE/75")
             ]
         )
         btn.insert(0, 
@@ -576,7 +575,7 @@ async def filter_languages_cb_handler(client: Client, query: CallbackQuery):
         btn = []
         btn.insert(0, 
             [
-                InlineKeyboardButton("💸 ʙᴜʏ ꜱᴜʙꜱᴄʀɪᴘᴛɪᴏɴ - ᴅɪʀᴇᴄᴛ ғɪʟᴇꜱ 💸", callback_data="premium_info")
+                InlineKeyboardButton("💸 ʙᴜʏ ꜱᴜʙꜱᴄʀɪᴘᴛɪᴏɴ - ᴅɪʀᴇᴄᴛ ғɪʟᴇꜱ 💸", callback_data="subscription")
             ]
         )
         btn.insert(0, 
@@ -757,7 +756,7 @@ async def filter_seasons_cb_handler(client: Client, query: CallbackQuery):
         btn = []
         btn.insert(0, 
             [
-                InlineKeyboardButton("💸 ʙᴜʏ ꜱᴜʙꜱᴄʀɪᴘᴛɪᴏɴ - ᴅɪʀᴇᴄᴛ ғɪʟᴇꜱ 💸", callback_data="premium_info")
+                InlineKeyboardButton("💸 ʙᴜʏ ꜱᴜʙꜱᴄʀɪᴘᴛɪᴏɴ - ᴅɪʀᴇᴄᴛ ғɪʟᴇꜱ 💸", callback_data="subscription")
             ]
         )
         btn.insert(0, 
@@ -1481,7 +1480,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
                     InlineKeyboardButton("🚀 ꜰᴀꜱᴛ ᴅᴏᴡɴʟᴏᴀᴅ", url=lazy_download),
                     InlineKeyboardButton("ᴡᴀᴛᴄʜ ᴏɴʟɪɴᴇ 🧿", url=lazy_stream)
                 ],[
-                    InlineKeyboardButton('📌 ᴊᴏɪɴ ᴜᴘᴅᴀᴛᴇꜱ ᴄʜᴀɴɴᴇʟ 📌', url='https://t.me/TG_UPDATES1')
+                    InlineKeyboardButton('📌 ᴊᴏɪɴ ᴜᴘᴅᴀᴛᴇꜱ ᴄʜᴀɴɴᴇʟ 📌', url='https://t.me/TG_UPDATES!')
                 ]]
             else:
                 await query.answer("🚸 ɴᴏᴛᴇ :\nᴀᴅ-ꜰʀᴇᴇ ꜱᴇʀᴠɪᴄᴇ ɪꜱ ᴏɴʟʏ ꜰᴏʀ ᴘʀᴇᴍɪᴜᴍ ᴜꜱᴇʀꜱ.\n\nᴛᴏ ᴋɴᴏᴡ ᴍᴏʀᴇ ᴄʜᴇᴄᴋ ᴘʟᴀɴꜱ.", show_alert=True)
@@ -1527,7 +1526,8 @@ async def cb_handler(client: Client, query: CallbackQuery):
         await query.answer(text=script.SINFO, show_alert=True)
 
     elif query.data == "start":
-        buttons = [[
+        if PREMIUM_AND_REFERAL_MODE == True:
+            buttons = [[
                     InlineKeyboardButton('➕ ᴀᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘ ➕', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
                 ],[
                     InlineKeyboardButton('▪️ ᴜᴘᴅᴀᴛᴇꜱ ▪️', callback_data='channels')
@@ -1536,6 +1536,8 @@ async def cb_handler(client: Client, query: CallbackQuery):
                     InlineKeyboardButton('🔸 ᴀʙᴏᴜᴛ 🔹', callback_data='about')
                 ],[
                     InlineKeyboardButton('✨ ʙᴜʏ ꜱᴜʙꜱᴄʀɪᴘᴛɪᴏɴ : ʀᴇᴍᴏᴠᴇ ᴀᴅꜱ ✨', callback_data="premium_info")
+                ],[
+                    InlineKeyboardButton('🔰ғʀᴇᴇ ᴘʀᴇᴍɪᴜᴍ sᴜʙsᴄʀɪᴘᴛɪᴏɴ🔰', callback_data="subscription")
                   ]]
         
         reply_markup = InlineKeyboardMarkup(buttons)
@@ -1773,13 +1775,13 @@ async def cb_handler(client: Client, query: CallbackQuery):
         buttons = [[
             InlineKeyboardButton('⚜️ ᴜᴘᴅᴀᴛᴇꜱ ᴄʜᴀɴɴᴇʟ ⚜️', url='https://t.me/TG_UPDATES1')
         ],[
-            InlineKeyboardButton('🔍 ɢʀᴏᴜᴘ¹', url='https://t.me/TG_Movie_Req_Grp'),
-            InlineKeyboardButton('ɢʀᴏᴜᴘ² 🔎', url='https://t.me/+T6GsioUXJyM5MTQ1')
+            InlineKeyboardButton('🔍 ɢʀᴏᴜᴘ¹', url='https://t.me/'),
+            InlineKeyboardButton('ɢʀᴏᴜᴘ² 🔎', url='https://t.me/')
         ],[
-            InlineKeyboardButton('✉️ ʀᴇǫᴜᴇꜱᴛ ɢʀᴏᴜᴘ ✉️', url='https://t.me/+Ul_owPNY0xQzOTRl')
+            InlineKeyboardButton('✉️ ʀᴇǫᴜᴇꜱᴛ ɢʀᴏᴜᴘ ✉️', url='https://t.me/')
         ],[
             InlineKeyboardButton('⇇ ʙᴀᴄᴋ', callback_data='start'),
-            InlineKeyboardButton('ꜱᴜᴘᴘᴏʀᴛ 👮', url='https://t.me/TG_SUPPORT_GROUP')
+            InlineKeyboardButton('ꜱᴜᴘᴘᴏʀᴛ 👮', url='https://t.me/')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await query.message.edit_text(
@@ -1852,6 +1854,22 @@ async def cb_handler(client: Client, query: CallbackQuery):
             reply_markup=reply_markup,
             parse_mode=enums.ParseMode.HTML
         )
+    elif query.data == "subscription":
+        buttons = [[
+            InlineKeyboardButton("🕳️ɪɴᴠɪᴛᴇ ʟɪɴᴋ🕳️", url="https://t.me/share/url?url=%F0%9F%A4%9F%CA%9C%E1%B4%87%CA%9F%CA%9F%E1%B4%8F%20%D2%93%CA%80%C9%AA%E1%B4%87%C9%B4%E1%B4%85.%F0%9F%98%8E%0A%0Ahttps%3A//t.me/%7Btemp.U_NAME%7D%3Fstart%3Dreff_%7Bquery.from_user.id%7D%0A%0A%F0%9F%92%96T%CA%9C%E1%B4%87%CA%80%E1%B4%87%20%E1%B4%80%CA%80%E1%B4%87%20%E1%B4%8D%E1%B4%80%C9%B4%CA%8F%20%C9%B4%E1%B4%87%E1%B4%A1%20%E1%B4%8D%E1%B4%8F%E1%B4%A0%C9%AA%E1%B4%87s%20%CA%9C%E1%B4%87%CA%80%E1%B4%87%2C%20%CA%8F%E1%B4%8F%E1%B4%9C%20J%E1%B4%9Cs%E1%B4%9B%20%CA%9C%E1%B4%80%E1%B4%A0%E1%B4%87%20%E1%B4%9B%E1%B4%8F%20s%CA%9C%E1%B4%80%CA%80%E1%B4%87%20%E1%B4%9B%CA%9C%C9%AAs%20%CA%99%E1%B4%8F%E1%B4%80%E1%B4%9B%20%E1%B4%A1%C9%AA%E1%B4%9B%CA%9C%F0%9F%A5%B4%20%F0%9D%9F%B8%F0%9D%9F%B6%20%E1%B4%98%E1%B4%87%E1%B4%8F%E1%B4%98%CA%9F%E1%B4%87.%20%20A%C9%B4%E1%B4%85%20%E1%B4%87%C9%B4J%E1%B4%8F%CA%8F%20%E1%B4%80%CA%9F%CA%9F%20%E1%B4%9B%CA%9C%E1%B4%87%20%E1%B4%8D%E1%B4%8F%E1%B4%A0%C9%AA%E1%B4%87s%20%E1%B4%A1%C9%AA%E1%B4%9B%CA%9C%E1%B4%8F%E1%B4%9C%E1%B4%9B%20%E1%B4%80%E1%B4%85s%20%E1%B4%80%C9%B4%E1%B4%85%20%E1%B4%A1%C9%AA%E1%B4%9B%CA%9C%E1%B4%8F%E1%B4%9C%E1%B4%9B%20s%CA%9C%E1%B4%8F%CA%80%E1%B4%9B%E1%B4%87%C9%B4%E1%B4%87%CA%80s.%F0%9F%94%B0%F0%9F%94%B0%0A%0A%20%E2%9C%85%E0%A4%AF%E0%A4%B9%E0%A4%BE%E0%A4%82%20%E0%A4%95%E0%A4%88%20%E0%A4%A8%E0%A4%88%20%E0%A4%AB%E0%A4%BF%E0%A4%B2%E0%A5%8D%E0%A4%AE%E0%A5%87%E0%A4%82%20%E0%A4%B9%E0%A5%88%E0%A4%82%2C%20%E0%A4%86%E0%A4%AA%E0%A4%95%E0%A5%8B%20%E0%A4%AC%E0%A4%B8%20%E0%A4%87%E0%A4%B8%20%CA%99%E1%B4%8F%E1%B4%9B%20%E0%A4%95%E0%A5%8B%20%F0%9D%9F%B8%F0%9D%9F%B6%20%E0%A4%B2%E0%A5%8B%E0%A4%97%E0%A5%8B%E0%A4%82%20%E0%A4%95%E0%A5%87%20%F0%9F%92%90%E0%A4%B8%E0%A4%BE%E0%A4%A5%20%E0%A4%B8%E0%A4%BE%E0%A4%9D%E0%A4%BE%20%E0%A4%95%E0%A4%B0%E0%A4%A8%E0%A4%BE%20%E0%A4%B9%E0%A5%8B%E0%A4%97%E0%A4%BE%E0%A5%A4%20%E0%A4%94%E0%A4%B0%20%E0%A4%AC%E0%A4%BF%E0%A4%A8%E0%A4%BE%20%E1%B4%80%E1%B4%85s%20%E0%A4%94%E0%A4%B0%20%E0%A4%AC%E0%A4%BF%E0%A4%A8%E0%A4%BE%20%E0%A4%B6%E0%A5%89%E0%A4%B0%E0%A5%8D%E0%A4%9F%E0%A4%A8%E0%A4%B0%20%E0%A4%95%E0%A5%87%20%E0%A4%B8%E0%A4%AD%E0%A5%80%20%E0%A4%AB%E0%A4%BF%E0%A4%B2%E0%A5%8D%E0%A4%AE%E0%A5%8B%E0%A4%82%20%E0%A4%95%E0%A4%BE%20%E0%A4%86%E0%A4%A8%E0%A4%82%E0%A4%A6%20%E0%A4%B2%E0%A5%87%E0%A4%82%E0%A5%A4%F0%9F%A5%B3%F0%9F%A5%B3"),
+            InlineKeyboardButton('⇚Back', callback_data='start')
+        ]]
+        reply_markup = InlineKeyboardMarkup(buttons)
+        await client.edit_message_media(
+            query.message.chat.id, 
+            query.message.id, 
+            InputMediaPhoto(random.choice(PICS))
+        )
+        await query.message.edit_text(
+            text=script.SUBSCRIPTION_TXT.format(REFERAL_PREMEIUM_TIME, temp.U_NAME, query.from_user.id, REFERAL_COUNT),
+            reply_markup=reply_markup,
+            parse_mode=enums.ParseMode.HTML
+       )
     elif query.data == "rfrsh":
         await query.answer("ꜰᴇᴛᴄʜɪɴɢ ᴍᴏɴɢᴏ-ᴅʙ ᴅᴀᴛᴀʙᴀꜱᴇ...")
         buttons = [[
@@ -2053,7 +2071,7 @@ async def auto_filter(client, msg, spoll=False):
     else:
         message = msg.message.reply_to_message  # msg will be callback query
         search, files, offset, total_results = spoll
-        m=await message.reply_sticker("CAACAgUAAxkBAAJY0GYsix_P9Euo4du72pDgIk3CAAHvmgACJgADvJY1Ku3HSQblMLZbHgQ",
+        m=await message.reply_sticker("CAACAgIAAxkBAAIw1WYC0JRcNEHRB50ozZrpw2F5YRo9AAJ1AQACEBptInCKj7c5KByPHgQ",
         reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton(f'Seaching for {search} 🔎', url=f"https://t.me/+Ul_owPNY0xQzOTRl")]]) 
         )
         settings = await get_settings(message.chat.id)
@@ -2074,7 +2092,7 @@ async def auto_filter(client, msg, spoll=False):
         ]
         btn.insert(0, 
             [
-                InlineKeyboardButton("💸 ʙᴜʏ ꜱᴜʙꜱᴄʀɪᴘᴛɪᴏɴ - ᴅɪʀᴇᴄᴛ ғɪʟᴇꜱ 💸", callback_data="premium_info")
+                InlineKeyboardButton("💸 ʙᴜʏ ꜱᴜʙꜱᴄʀɪᴘᴛɪᴏɴ - ᴅɪʀᴇᴄᴛ ғɪʟᴇꜱ 💸", callback_data="subscription")
             ]
         )
         btn.insert(0, 
@@ -2092,7 +2110,7 @@ async def auto_filter(client, msg, spoll=False):
         btn = []
         btn.insert(0, 
             [
-                InlineKeyboardButton("💸 ʙᴜʏ ꜱᴜʙꜱᴄʀɪᴘᴛɪᴏɴ - ᴅɪʀᴇᴄᴛ ғɪʟᴇꜱ 💸", url=f"https://t.me/About_HK_Bot/2")
+                InlineKeyboardButton("💸 ʙᴜʏ ꜱᴜʙꜱᴄʀɪᴘᴛɪᴏɴ - ᴅɪʀᴇᴄᴛ ғɪʟᴇꜱ 💸", callback_data="subscription")
             ]
         )
         btn.insert(0, 
@@ -2259,7 +2277,7 @@ async def advantage_spell_chok(client, msg):
         if not g_s:
             reqst_gle = query.replace(" ", "+")
             button = [[
-                       InlineKeyboardButton("📝 ʀᴇǫᴜᴇꜱᴛ ʜᴇʀᴇ", url=f"https://t.me/+Ul_owPNY0xQzOTRl")
+                       InlineKeyboardButton("📝 ʀᴇǫᴜᴇꜱᴛ ʜᴇʀᴇ", url=f"https://t.me/Punjabi_movies_villa")
             ]]
             if NO_RESULTS_MSG:
                 await client.send_message(chat_id=LOG_CHANNEL, text=(script.NORSLTS.format(reqstr.id, reqstr.mention, mv_rqst)))
@@ -2296,7 +2314,7 @@ async def advantage_spell_chok(client, msg):
         if not movielist:
             reqst_gle = query.replace(" ", "+")
             button = [[
-                       InlineKeyboardButton("📝 ʀᴇǫᴜᴇꜱᴛ ʜᴇʀᴇ", url=f"https://t.me/+Ul_owPNY0xQzOTRl")
+                       InlineKeyboardButton("📝 ʀᴇǫᴜᴇꜱᴛ ʜᴇʀᴇ", url=f"https://t.me/Punjabi_movies_villa")
             ]]
             if NO_RESULTS_MSG:
                 await client.send_message(chat_id=LOG_CHANNEL, text=(script.NORSLTS.format(reqstr.id, reqstr.mention, mv_rqst)))
@@ -2337,7 +2355,7 @@ async def advantage_spell_chok(client, msg):
             logger.exception(e)
             reqst_gle = mv_rqst.replace(" ", "+")
             button = [[
-                       InlineKeyboardButton("📝 ʀᴇǫᴜᴇꜱᴛ ʜᴇʀᴇ", url=f"https://t.me/+Ul_owPNY0xQzOTRl")
+                       InlineKeyboardButton("📝 ʀᴇǫᴜᴇꜱᴛ ʜᴇʀᴇ", url=f"https://t.me/Punjabi_movies_villa")
             ]]
             if NO_RESULTS_MSG:
                 await client.send_message(chat_id=LOG_CHANNEL, text=(script.NORSLTS.format(reqstr.id, reqstr.mention, mv_rqst)))
@@ -2352,7 +2370,7 @@ async def advantage_spell_chok(client, msg):
         if not movies:
             reqst_gle = mv_rqst.replace(" ", "+")
             button = [[
-                       InlineKeyboardButton("📝 ʀᴇǫᴜᴇꜱᴛ ʜᴇʀᴇ", url=f"https://t.me/+Ul_owPNY0xQzOTRl")
+                       InlineKeyboardButton("📝 ʀᴇǫᴜᴇꜱᴛ ʜᴇʀᴇ", url=f"https://t.me/Punjabi_movies_villa")
             ]]
             if NO_RESULTS_MSG:
                 await client.send_message(chat_id=LOG_CHANNEL, text=(script.NORSLTS.format(reqstr.id, reqstr.mention, mv_rqst)))
