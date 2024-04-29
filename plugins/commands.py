@@ -9,8 +9,8 @@ from pyrogram import Client, filters, enums
 from pyrogram.errors import ChatAdminRequired, FloodWait
 from pyrogram.types import *
 from database.ia_filterdb import Media, get_file_details, unpack_new_file_id, get_bad_files
-from database.users_chats_db import db
-from info import CHANNELS, ADMINS, AUTH_CHANNEL, LOG_CHANNEL, PICS, BATCH_FILE_CAPTION, CUSTOM_FILE_CAPTION, PROTECT_CONTENT, CHNL_LNK, GRP_LNK, REQST_CHANNEL, SUPPORT_CHAT_ID, SUPPORT_CHAT, MAX_B_TN, VERIFY, SHORTLINK_API, SHORTLINK_URL, TUTORIAL, IS_TUTORIAL, PREMIUM_USER, PICS, SUBSCRIPTION
+from database.users_chats_db import db, delete_all_referal_users, get_referal_users_count, get_referal_all_users, referal_add_user
+from info import CHANNELS, ADMINS, AUTH_CHANNEL, LOG_CHANNEL, PICS, BATCH_FILE_CAPTION, REFERAL_PREMEIUM_TIME, REFERAL_COUNT, PREMIUM_AND_REFERAL_MODE, CUSTOM_FILE_CAPTION, PROTECT_CONTENT, CHNL_LNK, GRP_LNK, REQST_CHANNEL, SUPPORT_CHAT_ID, SUPPORT_CHAT, MAX_B_TN, VERIFY, SHORTLINK_API, SHORTLINK_URL, TUTORIAL, IS_TUTORIAL, PREMIUM_USER, PICS, SUBSCRIPTION
 from utils import get_settings, get_size, is_req_subscribed, save_group_settings, temp, verify_user, check_token, check_verification, get_token, get_shortlink, get_tutorial
 from database.connections_mdb import active_connection
 # from plugins.pm_filter import ENABLE_SHORTLINK
@@ -42,7 +42,8 @@ async def start(client, message):
         await db.add_user(message.from_user.id, message.from_user.first_name)
         await client.send_message(LOG_CHANNEL, script.LOG_TEXT_P.format(message.from_user.id, message.from_user.mention))
     if len(message.command) != 2:
-        buttons = [[
+        if PREMIUM_AND_REFERAL_MODE == True:
+            buttons = [[
                     InlineKeyboardButton('➕ ᴀᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘ ➕', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
                 ],[
                     InlineKeyboardButton('▪️ ᴜᴘᴅᴀᴛᴇꜱ ▪️', callback_data='channels')
@@ -51,6 +52,8 @@ async def start(client, message):
                     InlineKeyboardButton('🔸 ᴀʙᴏᴜᴛ 🔹', callback_data='about')
                 ],[
                     InlineKeyboardButton('✨ ʙᴜʏ ꜱᴜʙꜱᴄʀɪᴘᴛɪᴏɴ : ʀᴇᴍᴏᴠᴇ ᴀᴅꜱ ✨', callback_data="premium_info")
+                ],[
+                    InlineKeyboardButton('🔰ғʀᴇᴇ ᴘʀᴇᴍɪᴜᴍ sᴜʙsᴄʀɪᴘᴛɪᴏɴ🔰', callback_data="subscription")
                   ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         current_time = datetime.now(pytz.timezone(TIMEZONE))
@@ -63,10 +66,10 @@ async def start(client, message):
             gtxt = "ɢᴏᴏᴅ ᴇᴠᴇɴɪɴɢ 👋"
         else:
             gtxt = "ɢᴏᴏᴅ ɴɪɢʜᴛ 👋"
-        m=await message.reply_text("🎉")
+        m=await message.reply_text("💐")
         await asyncio.sleep(1)
         await m.delete()
-        m=await message.reply_sticker("CAACAgUAAxkBAAJY0GYsix_P9Euo4du72pDgIk3CAAHvmgACJgADvJY1Ku3HSQblMLZbHgQ") 
+        m=await message.reply_sticker("CAACAgQAAxkBAAJW12YnxoHOawHL9f0ZA_giVIWb2JSPAAJcCgACzhPwUIbQnESa0uPUHgQ") 
         await asyncio.sleep(1)
         await m.delete()
         await message.reply_photo(
@@ -105,7 +108,8 @@ async def start(client, message):
             )
         return
     if len(message.command) == 2 and message.command[1] in ["subscribe", "error", "okay", "help"]:
-        buttons = [[
+        if PREMIUM_AND_REFERAL_MODE == True:
+            buttons = [[
                     InlineKeyboardButton('➕ ᴀᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘ ➕', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
                 ],[
                     InlineKeyboardButton('▪️ ᴜᴘᴅᴀᴛᴇꜱ ▪️', callback_data='channels')
@@ -114,6 +118,8 @@ async def start(client, message):
                     InlineKeyboardButton('🔸 ᴀʙᴏᴜᴛ 🔹', callback_data='about')
                 ],[
                     InlineKeyboardButton('✨ ʙᴜʏ ꜱᴜʙꜱᴄʀɪᴘᴛɪᴏɴ : ʀᴇᴍᴏᴠᴇ ᴀᴅꜱ ✨', callback_data="premium_info")
+                ],[
+                    InlineKeyboardButton('🔰ғʀᴇᴇ ᴘʀᴇᴍɪᴜᴍ sᴜʙsᴄʀɪᴘᴛɪᴏɴ🔰', callback_data="subscription")
                   ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         current_time = datetime.now(pytz.timezone(TIMEZONE))
@@ -126,10 +132,10 @@ async def start(client, message):
             gtxt = "ɢᴏᴏᴅ ᴇᴠᴇɴɪɴɢ 👋"
         else:
             gtxt = "ɢᴏᴏᴅ ɴɪɢʜᴛ 👋"
-        m=await message.reply_text("🎉")
+        m=await message.reply_text("💐")
         await asyncio.sleep(1)
         await m.delete()
-        m=await message.reply_sticker("CAACAgUAAxkBAAJY0GYsix_P9Euo4du72pDgIk3CAAHvmgACJgADvJY1Ku3HSQblMLZbHgQ") 
+        m=await message.reply_sticker("CAACAgQAAxkBAAJW12YnxoHOawHL9f0ZA_giVIWb2JSPAAJcCgACzhPwUIbQnESa0uPUHgQ") 
         await asyncio.sleep(1)
         await m.delete()
         await message.reply_photo(
@@ -139,7 +145,61 @@ async def start(client, message):
             parse_mode=enums.ParseMode.HTML
         )
         return
-        
+    data = message.command[1]
+    if data.split("-", 1)[0] == "Mv":
+        user_id = int(data.split("-", 1)[1])
+        Mv = await referal_add_user(user_id, message.from_user.id)
+        if Mv and PREMIUM_AND_REFERAL_MODE == True:
+            await message.reply(f"<b>You have joined using the referral link of user with ID {user_id}\n\nSend /start again to use the bot</b>")
+            num_referrals = await get_referal_users_count(user_id)
+            await client.send_message(chat_id = user_id, text = "<b>{} start the bot with your referral link\n\nTotal Referals - {}</b>".format(message.from_user.mention, num_referrals))
+            if num_referrals == REFERAL_COUNT:
+                time = REFERAL_PREMEIUM_TIME       
+                seconds = await get_seconds(time)
+                if seconds > 0:
+                    expiry_time = datetime.datetime.now() + datetime.timedelta(seconds=seconds)
+                    user_data = {"id": user_id, "expiry_time": expiry_time} 
+                    await db.update_user(user_data)  # Use the update_user method to update or insert user data
+                    await delete_all_referal_users(user_id)
+                    await client.send_message(chat_id = user_id, text = "<b>You Have Successfully Completed Total Referal.\n\nYou Added In Premium For {}</b>".format(REFERAL_PREMEIUM_TIME))
+                    return 
+        else:
+            buttons = [[
+                    InlineKeyboardButton('➕ ᴀᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘ ➕', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
+                ],[
+                    InlineKeyboardButton('▪️ ᴜᴘᴅᴀᴛᴇꜱ ▪️', callback_data='channels')
+                ],[
+                    InlineKeyboardButton('▫️ ᴄᴏᴍᴍᴀɴᴅꜱ ▫️', callback_data='help'),
+                    InlineKeyboardButton('🔸 ᴀʙᴏᴜᴛ 🔹', callback_data='about')
+                ],[
+                    InlineKeyboardButton('✨ ʙᴜʏ ꜱᴜʙꜱᴄʀɪᴘᴛɪᴏɴ : ʀᴇᴍᴏᴠᴇ ᴀᴅꜱ ✨', callback_data="premium_info")
+                ],[
+                    InlineKeyboardButton('🔰ғʀᴇᴇ ᴘʀᴇᴍɪᴜᴍ sᴜʙsᴄʀɪᴘᴛɪᴏɴ🔰', callback_data="subscription")
+                  ]]
+            reply_markup = InlineKeyboardMarkup(buttons)
+            current_time = datetime.now(pytz.timezone(TIMEZONE))
+            curr_time = current_time.hour        
+            if curr_time < 12:
+                gtxt = "ɢᴏᴏᴅ ᴍᴏʀɴɪɴɢ 👋" 
+            elif curr_time < 17:
+                gtxt = "ɢᴏᴏᴅ ᴀғᴛᴇʀɴᴏᴏɴ 👋" 
+            elif curr_time < 21:
+                gtxt = "ɢᴏᴏᴅ ᴇᴠᴇɴɪɴɢ 👋"
+            else:
+                gtxt = "ɢᴏᴏᴅ ɴɪɢʜᴛ 👋"
+            m=await message.reply_text("💐")
+            await asyncio.sleep(1)
+            await m.delete()
+            m=await message.reply_sticker("CAACAgQAAxkBAAJW12YnxoHOawHL9f0ZA_giVIWb2JSPAAJcCgACzhPwUIbQnESa0uPUHgQ") 
+            await asyncio.sleep(1)
+            await m.delete()
+            await message.reply_photo(
+                photo=random.choice(PICS),
+                caption=script.START_TXT.format(message.from_user.mention, temp.U_NAME, temp.B_NAME),
+                reply_markup=reply_markup,
+                parse_mode=enums.ParseMode.HTML
+            )
+            return
         
     if len(message.command) == 2 and message.command[1] in ["premium"]:
         buttons = [[
@@ -408,11 +468,11 @@ async def start(client, message):
         )
     )
             filesarr.append(msg)
-        k = await client.send_sticker(sticker="CAACAgUAAxkBAAJY0GYsix_P9Euo4du72pDgIk3CAAHvmgACJgADvJY1Ku3HSQblMLZbHgQ")
+        k = await client.send_sticker(sticker="CAACAgIAAxkBAAIocmX1CTONdNLrQtu_mLHT5K0vjAEPAAJ1AQACEBptInCKj7c5KByPHgQ")
         await asyncio.sleep(600)
         for x in filesarr:
             await x.delete()
-        await k.edit_sticker(sticker="CAACAgUAAxkBAAJY0GYsix_P9Euo4du72pDgIk3CAAHvmgACJgADvJY1Ku3HSQblMLZbHgQ")
+        await k.edit_sticker(sticker="CAACAgIAAxkBAAIocmX1CTONdNLrQtu_mLHT5K0vjAEPAAJ1AQACEBptInCKj7c5KByPHgQ")
         return    
         
     elif data.startswith("files"):
@@ -498,7 +558,7 @@ async def start(client, message):
             btn = [[
                 InlineKeyboardButton("❗ ɢᴇᴛ ꜰɪʟᴇ ᴀɢᴀɪɴ ❗", callback_data=f'delfile#{file_id}')
             ]]
-            k = await msg.reply(sticker="CAACAgUAAxkBAAJY0GYsix_P9Euo4du72pDgIk3CAAHvmgACJgADvJY1Ku3HSQblMLZbHgQ",quote=True)
+            k = await msg.reply(sticker="CAACAgIAAxkBAAIocmX1CTONdNLrQtu_mLHT5K0vjAEPAAJ1AQACEBptInCKj7c5KByPHgQ",quote=True)
             await asyncio.sleep(600)
             await msg.delete()
             await k.edit_text("<b>ʏᴏᴜʀ ᴠɪᴅᴇᴏ / ꜰɪʟᴇ ɪꜱ ꜱᴜᴄᴄᴇꜱꜱꜰᴜʟʟʏ ᴅᴇʟᴇᴛᴇᴅ !!\n\nᴄʟɪᴄᴋ ʙᴇʟᴏᴡ ʙᴜᴛᴛᴏɴ ᴛᴏ ɢᴇᴛ ʏᴏᴜʀ ᴅᴇʟᴇᴛᴇᴅ ᴠɪᴅᴇᴏ / ꜰɪʟᴇ 👇</b>",reply_markup=InlineKeyboardMarkup(btn))
@@ -547,7 +607,7 @@ async def start(client, message):
     btn = [[
         InlineKeyboardButton("❗ ɢᴇᴛ ꜰɪʟᴇ ᴀɢᴀɪɴ ❗", callback_data=f'delfile#{file_id}')
     ]]
-    k = await msg.reply(sticker="CAACAgUAAxkBAAJY0GYsix_P9Euo4du72pDgIk3CAAHvmgACJgADvJY1Ku3HSQblMLZbHgQ",quote=True)
+    k = await msg.reply(sticker="CAACAgIAAxkBAAIocmX1CTONdNLrQtu_mLHT5K0vjAEPAAJ1AQACEBptInCKj7c5KByPHgQ",quote=True)
     await asyncio.sleep(600)
     await msg.delete()
     await k.edit_text("<b>ʏᴏᴜʀ ᴠɪᴅᴇᴏ / ꜰɪʟᴇ ɪꜱ ꜱᴜᴄᴄᴇꜱꜱꜰᴜʟʟʏ ᴅᴇʟᴇᴛᴇᴅ !!\n\nᴄʟɪᴄᴋ ʙᴇʟᴏᴡ ʙᴜᴛᴛᴏɴ ᴛᴏ ɢᴇᴛ ʏᴏᴜʀ ᴅᴇʟᴇᴛᴇᴅ ᴠɪᴅᴇᴏ / ꜰɪʟᴇ 👇</b>",reply_markup=InlineKeyboardMarkup(btn))
@@ -1210,7 +1270,7 @@ async def settutorial(bot, message):
     else:
         pass
     if len(message.command) == 1:
-        return await message.reply("<b>ɢɪᴠᴇ ᴍᴇ ᴀ ᴛᴜᴛᴏʀɪᴀʟ ʟɪɴᴋ ᴀʟᴏɴɢ ᴡɪᴛʜ ᴛʜɪꜱ ᴄᴏᴍᴍᴀɴᴅ.\n\nᴜꜱᴀɢᴇ : /set_tutorial <code>https://t.me/HowToOpenHP</code></b>")
+        return await message.reply("<b>ɢɪᴠᴇ ᴍᴇ ᴀ ᴛᴜᴛᴏʀɪᴀʟ ʟɪɴᴋ ᴀʟᴏɴɢ ᴡɪᴛʜ ᴛʜɪꜱ ᴄᴏᴍᴍᴀɴᴅ.\n\nᴜꜱᴀɢᴇ : /set_tutorial <code>https://t.me/how_2_downlod/4</code></b>")
     elif len(message.command) == 2:
         reply = await message.reply_text("<b>ᴘʟᴇᴀꜱᴇ ᴡᴀɪᴛ...</b>")
         tutorial = message.command[1]
@@ -1218,7 +1278,7 @@ async def settutorial(bot, message):
         await save_group_settings(grpid, 'is_tutorial', True)
         await reply.edit_text(f"<b>✅ ꜱᴜᴄᴄᴇꜱꜱꜰᴜʟʟʏ ᴀᴅᴅᴇᴅ ᴛᴜᴛᴏʀɪᴀʟ\n\nʏᴏᴜʀ ɢʀᴏᴜᴘ : {title}\n\nʏᴏᴜʀ ᴛᴜᴛᴏʀɪᴀʟ : <code>{tutorial}</code></b>")
     else:
-        return await message.reply("<b>ʏᴏᴜ ᴇɴᴛᴇʀᴇᴅ ɪɴᴄᴏʀʀᴇᴄᴛ ꜰᴏʀᴍᴀᴛ !\nᴄᴏʀʀᴇᴄᴛ ꜰᴏʀᴍᴀᴛ : /set_tutorial <code>https://t.me/HowToOpenHP</code></b>")
+        return await message.reply("<b>ʏᴏᴜ ᴇɴᴛᴇʀᴇᴅ ɪɴᴄᴏʀʀᴇᴄᴛ ꜰᴏʀᴍᴀᴛ !\nᴄᴏʀʀᴇᴄᴛ ꜰᴏʀᴍᴀᴛ : /set_tutorial <code>https://t.me/how_2_downlod/4</code></b>")
 
 @Client.on_message(filters.command("remove_tutorial"))
 async def removetutorial(bot, message):
