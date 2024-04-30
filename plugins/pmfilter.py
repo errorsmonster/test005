@@ -1859,24 +1859,10 @@ async def cb_handler(client: Client, query: CallbackQuery):
             InlineKeyboardButton('⇚Back', callback_data='start')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
-        await query.message.edit_text(
-            text="■ □ □"
-        )
-        await query.message.edit_text(
-            text="■ ■ □"
-        )
-        await query.message.edit_text(
-            text="■ ■ ■"
-        )
         await client.edit_message_media(
             query.message.chat.id, 
             query.message.id, 
             InputMediaPhoto("https://graph.org/file/cef583c3e0926bc4709aa.jpg")
-        ) 
-        await client.edit_message_media(
-            query.message.chat.id, 
-            query.message.id, 
-            InputMediaPhoto(random.choice(PICS))
         )
         await query.message.edit_text(
             text=script.SUBSCRIPTION_TXT.format(REFERAL_PREMEIUM_TIME, temp.U_NAME, query.from_user.id, REFERAL_COUNT),
