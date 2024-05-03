@@ -157,7 +157,7 @@ async def next_page(bot, query):
 
         btn.insert(0, 
             [
-                InlineKeyboardButton("💸 ʙᴜʏ ꜱᴜʙꜱᴄʀɪᴘᴛɪᴏɴ - ᴅɪʀᴇᴄᴛ ғɪʟᴇꜱ 💸", url=f"https://t.me/MOVIES_VILLA_UPDATE/75")
+                InlineKeyboardButton("💸 ʙᴜʏ ꜱᴜʙꜱᴄʀɪᴘᴛɪᴏɴ - ᴅɪʀᴇᴄᴛ ғɪʟᴇꜱ 💸", callback_data="subscription")
             ]
         )
         btn.insert(0, 
