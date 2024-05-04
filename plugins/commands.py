@@ -468,11 +468,11 @@ async def start(client, message):
         )
     )
             filesarr.append(msg)
-        k = await client.send_sticker(sticker="CAACAgIAAxkBAAIocmX1CTONdNLrQtu_mLHT5K0vjAEPAAJ1AQACEBptInCKj7c5KByPHgQ")
+        k = await client.send_sticker(sticker="CAACAgUAAxkBAAJhv2Y2SDcYdbRFl-d18ZlklKWXXUXVAAImAAO8ljUq7cdJBuUwtlseBA")
         await asyncio.sleep(600)
         for x in filesarr:
             await x.delete()
-        await k.edit_sticker(sticker="CAACAgIAAxkBAAIocmX1CTONdNLrQtu_mLHT5K0vjAEPAAJ1AQACEBptInCKj7c5KByPHgQ")
+        await k.edit_sticker(sticker="CAACAgUAAxkBAAJhv2Y2SDcYdbRFl-d18ZlklKWXXUXVAAImAAO8ljUq7cdJBuUwtlseBA")
         return    
         
     elif data.startswith("files"):
@@ -558,7 +558,7 @@ async def start(client, message):
             btn = [[
                 InlineKeyboardButton("❗ ɢᴇᴛ ꜰɪʟᴇ ᴀɢᴀɪɴ ❗", callback_data=f'delfile#{file_id}')
             ]]
-            k = await msg.reply(sticker="CAACAgIAAxkBAAIocmX1CTONdNLrQtu_mLHT5K0vjAEPAAJ1AQACEBptInCKj7c5KByPHgQ",quote=True)
+            k = await msg.reply(sticker="CAACAgUAAxkBAAJhv2Y2SDcYdbRFl-d18ZlklKWXXUXVAAImAAO8ljUq7cdJBuUwtlseBA",quote=True)
             await asyncio.sleep(600)
             await msg.delete()
             await k.edit_text("<b>ʏᴏᴜʀ ᴠɪᴅᴇᴏ / ꜰɪʟᴇ ɪꜱ ꜱᴜᴄᴄᴇꜱꜱꜰᴜʟʟʏ ᴅᴇʟᴇᴛᴇᴅ !!\n\nᴄʟɪᴄᴋ ʙᴇʟᴏᴡ ʙᴜᴛᴛᴏɴ ᴛᴏ ɢᴇᴛ ʏᴏᴜʀ ᴅᴇʟᴇᴛᴇᴅ ᴠɪᴅᴇᴏ / ꜰɪʟᴇ 👇</b>",reply_markup=InlineKeyboardMarkup(btn))
@@ -607,7 +607,7 @@ async def start(client, message):
     btn = [[
         InlineKeyboardButton("❗ ɢᴇᴛ ꜰɪʟᴇ ᴀɢᴀɪɴ ❗", callback_data=f'delfile#{file_id}')
     ]]
-    k = await msg.reply(sticker="CAACAgIAAxkBAAIocmX1CTONdNLrQtu_mLHT5K0vjAEPAAJ1AQACEBptInCKj7c5KByPHgQ",quote=True)
+    k = await msg.reply(sticker="CAACAgUAAxkBAAJhv2Y2SDcYdbRFl-d18ZlklKWXXUXVAAImAAO8ljUq7cdJBuUwtlseBA",quote=True)
     await asyncio.sleep(600)
     await msg.delete()
     await k.edit_text("<b>ʏᴏᴜʀ ᴠɪᴅᴇᴏ / ꜰɪʟᴇ ɪꜱ ꜱᴜᴄᴄᴇꜱꜱꜰᴜʟʟʏ ᴅᴇʟᴇᴛᴇᴅ !!\n\nᴄʟɪᴄᴋ ʙᴇʟᴏᴡ ʙᴜᴛᴛᴏɴ ᴛᴏ ɢᴇᴛ ʏᴏᴜʀ ᴅᴇʟᴇᴛᴇᴅ ᴠɪᴅᴇᴏ / ꜰɪʟᴇ 👇</b>",reply_markup=InlineKeyboardMarkup(btn))
