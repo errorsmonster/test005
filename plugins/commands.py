@@ -1293,3 +1293,19 @@ async def stop_button(bot, message):
     await asyncio.sleep(3)
     await msg.edit("<b><i><u>ʙᴏᴛ ɪꜱ ʀᴇꜱᴛᴀʀᴛᴇᴅ</u> ✅</i></b>")
     os.execl(sys.executable, sys.executable, *sys.argv)
+
+@Client.on_message(filters.command("refer"))
+async def refer(bot, message):
+    btn = [[
+        InlineKeyboardButton('Iɴᴠɪᴛᴇ ʟɪɴᴋ', url=f'https://telegram.me/share/url?url=https://t.me/{bot.me.username}?start=reff_{message.from_user.id}&text=Hᴇʟʟᴏ%21%20Exᴘᴇʀɪᴇɴᴄᴇ%20ᴀ%20Bᴏᴛ%20Tʜᴀᴛ%20Oғғᴇʀs%20a%20ᴠᴀsᴛ%20Lɪʙʀᴀʀʏ%20ᴏғ%20Uɴʟɪᴍᴛᴇᴅ%20Mᴏᴠɪᴇs%20and%20Sᴇʀɪᴇs.%20%F0%9F%98%83'),
+        InlineKeyboardButton(f'⏳ {referdb.get_refer_points(message.from_user.id)}', callback_data='ref_point'),
+        InlineKeyboardButton('Cʟᴏsᴇ', callback_data='close_data')
+    ]]  
+    reply_markup = InlineKeyboardMarkup(btn)
+    await message.reply_photo(
+            photo=random.choice(REFER_PICS),
+            caption=f'👋Hay {message.from_user.mention},\n\nHᴇʀᴇ ɪꜱ ʏᴏᴜʀ ʀᴇғғᴇʀᴀʟ ʟɪɴᴋ:\nhttps://t.me/{bot.me.username}?start=reff_{message.from_user.id}\n\nSʜᴀʀᴇ ᴛʜɪs ʟɪɴᴋ ᴡɪᴛʜ ʏᴏᴜʀ ғʀɪᴇɴᴅ, Eᴀᴄʜ ᴛɪᴍᴇ ᴛʜᴇʏ ᴊᴏɪɴ ʏᴏᴜ ᴡɪʟʟ ɢᴇᴛ 10 ʀᴇғᴇʀᴀʟ ᴘᴏɪɴᴛ ᴀɴᴅ ᴀғᴛᴇʀ 100 ᴘᴏɪɴᴛs ʏᴏᴜ ᴡɪʟʟ ɢᴇᴛ 1 ᴍᴏɴᴛʜ ᴘʀᴇᴍɪᴜᴍ sᴜʙsᴄʀɪᴘᴛɪᴏɴ.',
+            reply_markup=reply_markup,
+            parse_mode=enums.ParseMode.HTML
+    )
+    
