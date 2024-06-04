@@ -231,17 +231,17 @@ Nᴀᴍᴇ : {}
 
 Mᴇꜱꜱᴀɢᴇ : <b>{}</b>"""
 
-    CAPTION = """ 📂 <i><a href="https://telegram.me/TG_UPDATES1">{file_name}</a></i>\n\n"""
+    CAPTION = """<blockquote> 📂 <i><a href="https://telegram.me/TG_UPDATES1">{file_name}</a></i></blockquote>\n\n"""
 
     IMDB_TEMPLATE_TXT = """
 <b>ʜᴇʏ {message.from_user.mention}, ʜᴇʀᴇ ɪꜱ ᴛʜᴇ ʀᴇꜱᴜʟᴛꜱ ꜰᴏʀ ʏᴏᴜʀ ǫᴜᴇʀʏ {search}.
 
-🧿 ᴛɪᴛʟᴇ : {title}
+<blockquote>🧿 ᴛɪᴛʟᴇ : {title}
 ⏰ ʀᴜɴᴛɪᴍᴇ : {runtime} Minutes
 📆 ʀᴇʟᴇᴀꜱᴇ ɪɴғᴏ : {release_date}
 📂 ᴛᴏᴛᴀʟ ꜰɪʟᴇꜱ : <code>{total_results}</code>
 📰 ʟᴀɴɢᴜᴀɢᴇ : {languages}
-🏷️ ᴘʟᴏᴛ : {plot}
+🏷️ ᴘʟᴏᴛ : {plot}</blockquote>
 
 💁‍♂️ ᴘᴏᴡᴇʀᴇᴅ ʙʏ : {message.chat.title}</b>"""
     
